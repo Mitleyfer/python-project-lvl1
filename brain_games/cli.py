@@ -1,3 +1,4 @@
+
 """Introduction module."""
 
 import prompt
@@ -5,9 +6,9 @@ import prompt
 
 def welcome_user():
     """
-    Greeting function
-    Return: user name
+    Greeting function.
+
+    Returns: None
     """
     name = prompt.string('Enter your name, please: ')
-    print('Hello, {}!'.format(name))
-    return name
+    print('Hello, {0}!'.format(name))
