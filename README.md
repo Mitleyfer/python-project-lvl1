@@ -4,3 +4,4 @@
 [![Github Actions Status](https://github.com/hexlet-boilerplates/python-package/workflows/Python%20CI/badge.svg)](https://github.com/altvec/python-project-lvl1/actions)
 
 https://asciinema.org/a/375020
+https://asciinema.org/a/375473
