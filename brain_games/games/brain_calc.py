@@ -13,13 +13,13 @@ print(f'Hello, {name}!')
 
 def choose_number():
     """
-    Chooses random number in range -100 - +101
+    Chooses random number in range 0 - 101
 
     Returns: random number
 
     """
 
-    return random.choice(range(-100, 101))
+    return random.choice(range(0, 101))
 
 def operation():
     """
