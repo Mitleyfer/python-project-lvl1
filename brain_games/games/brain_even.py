@@ -4,58 +4,30 @@
 
 import random
 import prompt
+from brain_games.scripts.run_game import run_game
 
 
-print('Welcome to the Brain Games!')
-name = prompt.string('May I have your name? ')
-print(f'Hello, {name}!')
-print("Answer 'yes' if the number is even, otherwise answer 'no'")
 
-def number():
-    """
-    Chooses number in range 1-101.
-
-    Returns: random number
-
-    """
-    return random.choice(range(1, 101))
-
-def check_number(user_input, n):
-    """
-    Checks if the number is even.
-
-    Returns: boolean
-
-    """
-    if (n % 2 == 0 and user_input == 'yes') or (n % 2 == 1 and user_input == 'no'):
-        return True
-    return False
-
-def run_episode():
+def game():
     """
     Runs a single game episode.
-    Returns: None
+    Returns: tuple
 
     """
 
-    num = number()
+    num = random.choice(range(0, 101))
+    correct_answer = 'yes' if num % 2 == 0 else 'no'
+    print("Answer 'yes' if the number is even, otherwise answer 'no'.")
     print(f'Question: {num}')
-    answer = prompt.string('Your answer: ')
-    if check_number(answer, num):
-        print('Correct!')
-        return True
+    user_answer = prompt.string('Your answer: ')
+    if user_answer == correct_answer:
+        return (True, user_answer, correct_answer)
     else:
-        print(f"'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, {name}!")
-        return False
+        return (False, user_answer, correct_answer)
 
 def main():
 
-    for e in range(3):
-        episode = run_episode()
-        if not episode:
-            return episode
-
-    print(f'Congratulations, {name}!')
+    run_game(game)
 
 if __name__ == "__main__":
 
