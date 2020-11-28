@@ -7,10 +7,10 @@ Brain-even game demonstration:
 
 https://asciinema.org/a/375020
 
-Brain-calculator game demonstration
+Brain-calculator game demonstration:
 
 https://asciinema.org/a/375473
 
-Brain-GCD game demonstration
+Brain-GCD game demonstration:
 
 https://asciinema.org/a/375947
