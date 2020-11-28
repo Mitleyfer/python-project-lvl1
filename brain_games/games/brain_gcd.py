@@ -1,3 +1,5 @@
+#!usr/bin/env python3
+
 """Find Greatest Common Divisor."""
 
 import prompt
